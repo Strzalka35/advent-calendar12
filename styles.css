@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.day {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.day img {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.day.open {
+    background-color: #4caf50;
+    transform: scale(1.1);
+}
+
+.day.open img {
+    display: block;
+}
+
